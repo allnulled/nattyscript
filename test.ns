@@ -1,0 +1,2044 @@
+# Generatives #
+
+# Generatives.Text #
+
+A fact {
+  Expect that "Hello" is a type of text.
+  Expect that """Hello""" is a type of text.
+  Expect that a text likeHelloend of text is a type of text.
+}.
+
+# Generatives.Number #
+
+A fact {
+  Expect that 0 is a type of number.
+  Expect that 0.0 is a type of number.
+  Create x as 2.
+  Expect that 2x is like 4.
+  // Powered by, in a handy way:
+  Expect that 2x^2 is like 16.
+  Expect that 2x^(2+1) is like 64.
+  Expect that 10^5 is like 100000.
+}.
+
+# Generatives.Undefined #
+
+A fact {
+  Expect that undefined is falsy.
+}.
+
+# Generatives.Null #
+
+A fact {
+  Expect that null is falsy.
+  Expect that null is a type of object.
+}.
+
+# Generatives.Infinity #
+
+A fact {
+  Expect that Infinity is defined.
+}.
+
+# Generatives.List #
+
+A fact {
+  Expect that [] is a type of list.
+  Expect that [0,1,2].2 is like 2.
+  Expect that [0,1,2].{1} is like 1.
+}.
+
+# Generatives.Object #
+
+A fact {
+  Expect that {} is a type of object.
+  Expect that {0:0,*0+1:1,@"2":2}.2 is like 2.
+  Expect that {0:0,*0+1:1,@"2":2}.{1} is like 1.
+}.
+
+# Generatives.Boolean #
+
+A fact {
+  # Generatives.Boolean.Type #
+  Expect that a fn is a type of action.
+  Expect that Infinity is a type of numberable 
+    & 20.5 is a type of numberable.
+  Expect that 10 is a type of number.
+  Expect that 20 is a type of integer.
+  Expect that "" is a type of text.
+  Expect that [] is a type of list.
+  Expect that {} is a type of object.
+  Expect that true is a type of condition.
+  Expect that false is a type of boolean.
+  Expect that The.Intentions.of.a.bad.State.towards.the.poverty are not defined.
+  Create emptyVariable.
+  Expect that emptyVariable is undefined.
+  Expect that null is null.
+  Expect that true is true.
+  Expect that false is false.
+  Expect that 5 is not falsy & null is falsy.
+  # Generatives.AnInstanceOf #
+  Create Class1 as an idea {}.
+  Create instance1 as a new Class1.
+  Expect that instance1 is an instance of Class1.
+  # Generatives.Comparison #
+  Expect that 5 is the same as 2.5 + 2.5.
+  Expect that "5" is not the same as 2.5 + 2.5.
+  Expect that 5 !== "5".
+  Expect that 5 is different from "5".
+  Expect that 5 === 5.
+  Expect that "5" is like 2.5 + 2.5.
+  Expect that 5 == "5.0".
+  Expect that 5 != "5.1".
+  Expect that 5 is unlike "5.1".
+  Expect that 10 is less than 11.
+  Expect that 10 < 11.
+  Expect that 11 is more than 10.
+  Expect that 11 > 10.
+  Expect that 10 is less or the same as 10.
+  Expect that 10 is less or the same as 11.
+  Expect that 10 <= 11.
+  Expect that 10 <= 10.
+  Expect that 11 is more or the same as 11.
+  Expect that 11 is more or the same as 10.
+  # Generatives.Contention #
+  Expect that {*" - ":null} has " - ".
+  Expect that {run: a fn} knows how to "run".
+  # Generatives.SpecialOperations #
+  // ~ is among ~
+  Expect that 9 is among 7, 8, 9;.
+  Expect that 9 is inside [7, 8, 9].
+  Expect that 9 is a key in {
+    - 7: 700,
+    - 9: 900
+  }.
+  Expect that 900 is a value in {
+    - 7: 700,
+    - 9: 900
+  }.
+  Expect that 6 is the 3rd in [4,5,6].
+  Expect that 4 is the 3rd starting from behind in [4,5,6].
+  Expect that {
+    - a: "some text",
+    - b: 80 + 70
+  } is similar to {
+    - a: "some" + " text",
+    - b: 150
+  }.
+  Expect that [50, 60, 70] contains 60.
+  # Generatives.True #
+  Expect that a fact {
+    Return true.
+  } is true.
+  # Generatives.False #
+  Expect that a fact {
+    Return false.
+  } is false.
+}.
+
+# Generatives.ActionDefinition #
+
+A fact {
+  Expect that a fn is a type of action.
+  Expect that a func is a type of action.
+  Expect that a function is a type of action.
+  Expect that a function {} is a type of action.
+  Expect that a function() {} is a type of action.
+  Expect that a function(a,b) that returns a + b is a type of action.
+}.
+
+# Generatives.Action #
+
+A fact {
+  Create example as a function (a,b) that returns a + a + b + b.
+  Expect that example(2,1) is like 6.
+}.
+
+# Generatives.Happening #
+
+A fact {
+  Create data as 5.
+  Expect that a fact(data) {
+    Return 3000 + data.
+  } is like 3005.
+}.
+
+# Generatives.RegularExpression #
+
+A fact {
+  Create regexp as /^[A-Za-z0-9]+$/g.
+  Expect that regexp.test("Hola") is true.
+  Expect that regexp.test("Hola") is true.
+  Expect that regexp.test("Ups ") is false.
+  Expect that regexp.test("Ups ") is false.
+}.
+
+# Generatives.ATypeReferenceFrom #
+
+A fact {
+  Expect that a type reference from {} is like "object".
+  Expect that a type reference from null is like "object".
+  Expect that a type reference from undefined is like "undefined".
+  Expect that a type reference from 0 is like "number".
+  Expect that a type reference from "" is like "string".
+  Expect that a type reference from a fn is like "function".
+}.
+
+# Generatives.ThirdConditional #
+
+A fact {
+  Expect that when 0 is like 0 then true otherwise false; is true.
+}.
+
+# Sentences.Conditional #
+
+A fact {
+  // Positive conditional:
+  Expect that a fact {
+    If 7 is like 6 {
+      Return 1.
+    }
+    Else if 8 is like 4+4 {
+      Return 2.
+    }
+    Else {
+      Return 3.
+    }.
+  } is like 2.
+  // Negative conditional:
+  Expect that a fact {
+    Unless 7 is like 6 {
+      Return 1.
+    }
+    And unless 8 is like 4+4 {
+      Return 2.
+    }
+    Else {
+      Return 3.
+    }.
+  } is like 1.
+  // Positive and negative conditionals mixed:
+  Expect that a fact {
+    If 7 is like 6 {
+      Return 1.
+    }
+    And unless 8 is like 4+4 {
+      Return 2.
+    }
+    Else {
+      Return 3.
+    }.
+  } is like 3.
+}.
+
+# Sentences.SwitchCase #
+
+A fact {
+  Create value as 100.
+  Create finalValue as "no ok".
+  Switch depending on value {
+    Like 100: {
+      Set finalValue to "ok".
+      Break here.
+    }  
+    Like 200: {
+      Set finalValue to "no ok 1".
+      Break here.
+    }
+    By default: {
+      Set finalValue to "no ok 2".
+      Break here.
+    }
+  }.
+  Expect that finalValue is like "ok".
+}.
+
+# Sentences.Iteration #
+
+A fact {
+  Create counter as 0.
+  From 0 to 10 {
+    Increase counter in index.
+  }.
+  Expect that counter is like 45.
+  Set counter to 0.
+  Repeat 10 times {
+    Increase counter in time.
+  }.
+  Expect that counter is like 45.
+}.
+
+# Sentences.Introspection #
+
+A fact {
+  Create data as {
+    - name: "name value",
+    - surname: "surname value",
+    - city: "city value"
+  }.
+  Create index as 0.
+  Introspect data 
+    with property as key
+    with value as val {
+    Increase index.
+    Switch depending on index {
+      Like 1: {
+        Expect that key is like "name".
+        Expect that val is like "name value".
+        Break here.
+      }
+      Like 2: {
+        Expect that key is like "surname".
+        Expect that val is like "surname value".
+        Break here.
+      }
+      Like 3: {
+        Expect that key is like "city".
+        Expect that val is like "city value".
+        Break here.
+      }
+      By default: {
+        Expect that "Switch sentence test failed" is like null.
+        Break here.
+      }
+    }.
+  }.
+}.
+
+# Sentences.Break #
+
+A fact {
+  Create finalValue as null.
+  A situation called FirstConditional where:
+  If true {
+    Set finalValue to 1.
+    Break situation FirstConditional.
+    Set finalValue to 2.
+  }.
+  Expect that finalValue is like 1.
+}.
+
+# Sentences.Continue #
+
+A fact {
+  Create finalValue as null.
+  Create data as {*"name": "some name"}.
+  A situation called FirstIteration where:
+  Go by data {
+    Set finalValue to 1.
+    Continue situation FirstIteration.
+    Set finalValue to 2.
+  }.
+  Expect that finalValue is like 1.
+}.
+
+# Sentences.Redefinition #
+
+A fact {
+  Create:
+    - a: "a",
+    - b: "b".
+  Expect that a is like "a".
+  Expect that b is like "b".
+}.
+
+# Sentences.Equivalence #
+
+A fact {
+  Create value as "a".
+  Set value to "b".
+  Expect that value is like "b".
+}.
+
+# Sentences.Delete #
+
+A fact {
+  Create z as "z".
+  Delete z.
+  Expect that z is not defined.
+}.
+
+# Sentences.Return #
+
+A fact {
+  Create dummyFunction as a fn {
+    Return 500.
+  }.
+  Create dummyFunction2 as a fn {
+    Return:
+      - name: "some name",
+      - value: "some value".
+  }.
+  Expect that dummyFunction() is like 500.
+  Expect that 
+    dummyFunction2() has "name" &
+    dummyFunction2() has "value" &
+    dummyFunction2().name is like "some name" &
+    dummyFunction2().value is like "some value".
+}. 
+
+# Sentences.Comment #
+
+(* NOTE: the comments don't use the ".\n" in the end. *)
+
+/* NOTE: the comments don't use the ".\n" in the end. */
+
+// NOTE: the comments don't use the ".\n" in the end.
+
+# Sentences.Exception #
+
+A fact {
+  Create finalValue as null.
+  Try {
+    Set finalValue to 1.
+    Throw a new Error.
+  } Catch {
+    Increase finalValue in 1.
+  } Finally {
+    Increase finalValue in 2.
+  }.
+  Expect that finalValue is like 4.
+}.
+
+# Organization #
+
+# Organization.Indexation #
+
+A fact {
+  Expect that [ns2js:]# This is an index #[:ns2js].indexOf("//") is like 0.
+}.
+
+# Organization.Documentation #
+
+A fact {
+  
+  === Documentation... ===
+  <div>
+    <h1>Title</h1>
+    <div>
+      Go to the menu of the editor, and click to 
+      "Documentation" to see all the documentation 
+      in script.
+    </div>
+  </div>
+  === ...Documentation ===.
+  
+  // This is for embedding NS code directly.
+  // The code is part of the script, but it will
+  // be added to the documentation text of the 
+  // script:
+  
+  === Documentation Code... ===
+  Create somethingCool.
+  Create somethingGreat.
+  Create somethingUseful.
+  === ...Documentation Code ===.
+  
+}.
+
+# Organization.Todos #
+
+A fact {
+  @TODO: This is a TODO @TODO.
+  @TODO: Check all the TODOs of the script 
+  clicking the menu of the editor, and 
+  going to the TODOs option.@TODO.
+}.
+
+# Asynchronicity #
+
+# Asynchronicity.Thread #
+
+A fact {
+  // Thread as sentence:
+  Start a thread in 1 seconds like {
+    Log "[...] Thread of 5 seconds...".
+  }
+  Stop it once done {
+    Start a thread in 2 seconds as on done.
+    Expect that true as "Thread Sentence test passed (1/2)";.
+  }.
+  // Thread as generative:
+  Create threadId as a thread in 2 seconds like {
+    Expect that "Threads test failed (2)" is null.
+  }.
+  Let clearTimeout(threadId).
+  // Looped thread:
+  Create temporaryIndex as 0.
+  Start a looped thread each 2 seconds like {
+    Increase temporaryIndex.
+  }
+  Stop it once done {
+    Start a thread in 4 seconds like {
+      Done.
+      Expect that temporaryIndex is less than 12 &
+        temporaryIndex is more than 0.
+    }.
+  }.
+}.
+
+# Asynchronicity.OnceThen #
+
+A fact {
+  Once done {
+    Done.
+  }
+  Then {
+    Expect that "Once then test passed" is not null.
+  }.
+}.
+
+# Asynchronicity.OnceInARow #
+
+A fact {
+  Once done in a row {
+    Done.
+  }
+  Then {
+    Done.
+  }
+  Then {
+    Done.
+  }
+  Then {
+    Expect that "Once in a row then test passed" is not null.
+  }.
+}.
+
+# Asynchronicity.Done #
+
+A fact {
+  // Without parenthesys:
+  Create done as a fn {
+    Expect that "Done test passed (1/2)" is not null.
+  }.
+  Done.
+  // With parenthesys:
+  Set done to a fn(a,b) {
+    Expect that "Done test passed (2/2)" is not null.
+    Expect that a + b is like 14.
+  }.
+  Done(5,9).
+}.
+
+# Asynchronicity.OnDone #
+
+A fact {
+  Create done as a function {
+    Expect that "On done test passed" is not null.
+  }.
+  Start a thread in 2 seconds as on done.
+}.
+
+# Asynchronicity.IterateAsync #
+
+A fact {
+  Create data as {
+    - a: "a",
+    - b: "b"
+  }.
+  Iterate sync data {
+    Expect that when key is like "a" then value is like "a" otherwise
+      when key is like "b" then value is like "b" otherwise false.
+    Done.
+  }.
+}.
+
+# Asynchronicity.LoadResource #
+
+A fact {
+  Create divsAdded as <* "div.divadded" *>.length.
+  Create linksLength as <* "link" *>.length.
+  Load resources sync from:
+    - "js/loadresource.example.js",
+    - "css/loadresource.example.css";.
+  Create divsAdded2 as <* "div.divadded" *>.length.
+  Create linksLength2 as <* "link" *>.length.
+  Expect that divsAdded is like divsAdded2 - 1.
+  Expect that linksLength is like linksLength2 - 1.
+}.
+
+# Asynchronicity.AjaxCall #
+
+A fact {
+  An ajax call to "#" {
+    Expect that data.match(/<title>[^<]+<\/title>/g).0 is like "<title>NaturalScript Desktop Editor</title>".
+  On errors then:
+    Log "AJAX call failed", error.
+  }.
+}.
+
+# Mathemathics #
+# Mathemathics.Increase #
+# Mathemathics.Decrease #
+
+A fact {
+  Create index as 0.
+  
+  Increase index.
+  Expect that index is like 1.
+  
+  Increase index in 2.
+  Expect that index is like 3.
+  
+  Increase index with "60".
+  Expect that index is like 360.
+  
+  Set index to parseInt(index).
+  Decrease index in 50.
+  Expect that index is like 310.
+  
+  Decrease index.
+  Expect that index is like 309.
+  
+}.
+
+# Environment.EnvironmentSetter #
+
+# Testing #
+# Testing.Assert #
+
+A fact {
+  Assert that 8 is a type of number as "Assertions and expectations do more or less the same".
+}.
+
+# Testing.Expect #
+
+A fact {
+  Expect that "Expect works" is a type of text.
+  Expect that "Expect works" is a type of text as "An expectation";.
+  
+}.
+
+# Testing.Breakpoint #
+
+A fact {
+  Create code as [ns2js:]
+    Breakpoint "Hello!".
+    Bp "Hello again!".
+  [:ns2js].
+}.
+
+
+# Modularity #
+# Modularity.Import #
+# Modularity.Export #
+
+A fact {
+  // In browser: __NaturalScriptVars__.modules
+  // In NodeJS: require(~) / module.exports = ~;
+  In browser.
+  Export as "module 1": {- val1: "one"}.
+  Import "module 1" to mod1.
+  Expect that mod1 has "val1" &
+    mod1.val1 is like "one".
+}.
+
+
+# Polycode #
+# Polycode.DOMSelector #
+
+A fact {
+  Expect that <* "title" *>.0.textContent is like "NaturalScript Desktop Editor".
+}.
+
+# Polycode.CSS #
+
+A fact {
+  Expect that [css:].CodeMirror {}[:css].textContent.indexOf(".CodeMirror") is like 0.
+}.
+
+# Polycode.HTML #
+
+A fact {
+  Expect that [html:]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tips</title>
+  <link rel="stylesheet" type="text/css" href="custom.css"/>
+  <script src="custom.js"></script>
+</head>
+<body>
+  <ul>
+    <li>You can easily and fastly bunches of code.</li>
+    <li>Also, there are shortcuts available already.</li>
+    <li>For example:
+      <ul>
+        <li>"html5init" + Tab</li>
+        <li>"link" + Tab</li>
+        <li>"script" + Tab</li>
+      </ul>
+    </li>
+    <li>You can add your own shortcuts to the editor too.</li>
+  </ul>  
+</body>
+</html>
+  [:html].indexOf("html5init") is not like -1.
+}.
+
+# Polycode.JS #
+
+A fact {
+  Create jsCode as [js:]
+    let javaScript = "THE language";
+    let sayTheTruth = function(message) {
+      console.log("It was because of " + javaScript);
+    };
+  [:js].
+  Expect that jsCode.indexOf("It was because of") is not like -1.
+}.
+
+# Polycode.NS #
+
+A fact {
+  Expect that [ns:]
+    Create nsCode as "a recursive madness".
+  [:ns].indexOf("recursive madness") is not like -1.
+}.
+
+# Polycode.NS2JS #
+
+A fact {
+  Expect that [ns2js:]
+    Create i as 0.
+    From 0 to 10 {}.
+    Return i.
+  [:ns2js].indexOf("return i") is not like -1.
+}.
+
+# Polycode.PEGJSParser #
+
+A fact {
+  Create parser as a parser like:
+  L = greetings:("Hello" [\n\r\t ]*)+
+  {
+    return greetings.length;
+  }
+  === End of parser ===.
+  Expect that parser knows how to "parse" &
+    parser.parse("Hello Hello Hello ") is like 3.
+}.
+
+# Polycode.Code #
+
+A fact {
+  Create randomMessage as null.
+  Create randomData as {{({
+    init: function(message) {
+        randomMessage = message;
+        return message;
+      }
+    })}}.init("Something").
+  Expect that randomData is like "Something".
+}.
+
+# Polycode.JSON #
+
+A fact {
+  Create jsonCode as [json:]
+  {
+    "a": "aaa",
+    "b": "bbb",
+    "c": "ccc"
+  }
+  [:json].
+  Expect that jsonCode has "a" &
+    jsonCode.a is like "aaa" &
+    jsonCode has "b" &
+    jsonCode.b is like "bbb".
+}.
+
+
+# Sequence #
+
+# Sequence.Sequence #
+
+A fact {
+  Create seq as a sequence named Seq {
+    
+    Begin step 0 with a, b; like:
+    Expect that (a is like 700) & (b is like 500) as "The sequence accepts first call parameters";.
+    Go to step 1 from Seq with 0, 1, 2;.
+    Expect that "Go to step continued execution" is not null.
+    Return going to step 5 from Seq with 6;.
+    
+    Begin step 1 with a, b, c; like:
+    Expect that a is like 0 & b is like 1 & c is like 2.
+    End at step 2 from Seq with "minha", "galera";.
+    Expect that "End at step did not continue the execution" is null.
+    
+    Begin step 2 with m, n; like:
+    Expect that m is like "minha" & n is like "galera".
+    End at step 4 from Seq.
+    
+    Begin step 3 like:
+    Log "Not here".
+    Expect that "Sequence not jumped in test" is null.
+    
+    Begin step 4 like:
+    Expect that "Sequence jumped in test" is not null.
+    Return 8008.
+    
+    Begin step 5 with offset; like:
+    Return 300 + offset.
+    
+  }.
+  Create seqOutput as a sequence call to seq with 700, 500;.
+  Expect that seqOutput is like 306.
+}.
+
+
+# OOP #
+
+A fact {
+  
+  # OOP.Instance #
+  # OOP.InstanceDefinition #
+  Create Person as an idea (name, surname, city) {
+    Set this idea.name as name.
+    Set this idea.surname as surname.
+    Set this idea.city as city.
+    Set this idea.types as [].
+  }.
+  # OOP.InstanceCreation #
+  Create CarlCarlson as a new Person("Carl", "Carlson", "Stringfield").
+  
+  # OOP.Trait #
+  # OOP.TraitDefinition #
+  Create ConsciousPersonTrait as a trait {
+    Set this trait.interpretation to "relative".
+    Set this trait.knowledge to "limited".
+    Set this trait.effortForTruth to "absolute".
+    Let this idea.types.push("Conscious").
+  }.
+  Create BluePersonTrait as a trait {
+    Set this trait.color to "blue".
+    Let this idea.types.push("Blue").
+  }.
+  # OOP.TraitImplementation #
+  Create ConsciousAndBluePerson as an idea
+    that extends from a new Person
+    that implements ConsciousPersonTrait {
+    # OOP.TraitImplementation through Implement Sentence #
+    Implement trait BluePersonTrait into this idea with 5,10,15;.
+    Let this idea.types.push("Conscious & Blue").
+  }.
+  Create person as a new ConsciousAndBluePerson.
+  Expect that person.types.length is more than 0.
+  Expect that person.types.0 is like "Conscious".
+  Expect that person.types.1 is like "Blue".
+  Expect that person.types.2 is like "Conscious & Blue".
+  
+}.
+
+
+# Various #
+
+# Various.Shortcuts #
+
+A fact {
+  Alert "Hello!!".
+  Log "Hello!".
+  Error "Hello!".
+  Debug "Hello!".
+  // In "Electron" the prompt is not available
+  Try {
+    Create name as a prompt "Write 'a'".
+    Expect that name is like "a".
+  } Catch {
+  
+  }.
+}.
+
+# Various.InitializeProject #
+
+A fact {
+  Initialize project at "/" 
+  with dependencies: 
+    - @"express": "*",
+    - @"body-parser": "*";
+  with available tasks: 
+    - @"initialize-project": a fn {
+    
+    }, 
+    - @"reset-project": a fn {
+    
+    };
+  executing tasks: [];
+  like:
+  {
+  
+  }.
+}.
+
+# Various.IsolatedEnvironment #
+
+A fact {
+  Expect that [ns2js:]
+  Isolated environment {
+    // NS Dependencies will appear duplicated inside these brackets
+  }.
+  [:ns2js].indexOf("__NaturalScriptFuncs__ = {};") is not like -1.
+}.
+
+# DataManipulation #
+
+# DataManipulation.MappedObject #
+
+A fact {
+  Create data as a mapped object from {
+    - 0: "000",
+    - 1: "001"
+  } like {
+    Return:
+      - key: "-" + key,
+      - value: "-" + value.
+  }.
+  Expect that data is a type of object.
+  Expect that data has "-0".
+  Expect that data has "-1".
+  Expect that data.{"-0"} is like "-000".
+  Expect that data.{"-1"} is like "-001".
+}.
+
+# DataManipulation.MappedList #
+
+A fact {
+  Create data as a mapped list from {
+    - 5: "000",
+    - 6: "001"
+  } like {
+    Return: "--" + value.
+  }.
+  Expect that data is a type of list.
+  Expect that data has "0".
+  Expect that data has "1".
+  Expect that data.0 is like "--000".
+  Expect that data.1 is like "--001".
+}.
+
+# DataManipulation.FilteredObject #
+
+A fact {
+  Create data as a filtered object from {
+    - 0: "000",
+    - 1: "001"
+  } like {
+    Return when key is like 0 then false otherwise true.
+  }.
+  Expect that data is a type of object.
+  Expect that data does not have "0".
+  Expect that data has "1".
+  Expect that data.1 is like "001".
+}.
+
+# DataManipulation.FilteredList #
+
+A fact {
+  Create data as a filtered list from {
+    - 0: "000",
+    - 1: "001"
+  } like {
+    Return when key is like 0 then false otherwise true.
+  }.
+  Expect that data is a type of list.
+  Expect that data has "0".
+  Expect that data does not have "1".
+  Expect that data.0 is like "001".
+}.
+
+# DataManipulation.Extension #
+
+A fact {
+  Create dataPrevious as {a:0,b:1,c:2}.
+  Create data as an extension from dataPrevious with {d:3,e:4,f:5}, {g:6,h:7,i:8};.
+  Expect that data has "a" & data has "d" & data has "g".
+}.
+
+# DataManipulation.ASetFrom #
+
+A fact {
+  Create data as a set from [0,5,12,30,21,77];.
+  Create data2 as a set from "Hello!";.
+  Expect that data is a type of list
+    & data2 is a type of list
+    & data2.0 is like "Hello!".
+}.
+
+# DataManipulation.ASetFromFilters #
+
+A fact {
+  Create data as a set from <* "body" *>;.
+  
+  // Feel free to explore all the options:
+
+  /*
+
+  initialize 
+  DOM children
+  DOM parents
+  add all
+  sbustract
+  log
+  commons only
+  commons only with duplicated
+  unique
+  one
+  sort
+  sort like
+  sort alphabetically
+  sort numerically
+  reverse
+  mapped like
+  filtered like
+  first
+  last
+  iterate like
+
+  // */
+
+}.
+
+# DataManipulation.AKeysSet #
+
+A fact {
+  Create keys as a set of keys from {
+    - a: 0,
+    - z: 10,
+    - m: 5
+  }.
+  Expect that "a" is inside keys
+    & "z" is inside keys
+    & "m" is inside keys
+    & "b" is not inside keys
+    & 0 is not inside keys.
+}.
+
+# DataManipulation.AValuesSet #
+
+A fact {
+  Create values as a set of values from {
+    - a: 0,
+    - z: 10,
+    - m: 5
+  }.
+  Expect that 0 is inside values
+    & 10 is inside values
+    & 5 is inside values
+    & "a" is not inside values
+    & "z" is not inside values.
+}.
+
+# DataManipulation.FromIts #
+
+A fact {
+  Create first as from [6,7,8] its 1st.
+  Create second as from [6,7,8] its 2nd.
+  Create third as from [6,7,8] its 3rd.
+  Create fourth as from [6,7,8,66] its 4th.
+  Create fifth as from [6,7,8,99,98] its 5th.
+  Expect that first is like 6
+    & second is like 7
+    & third is like 8
+    & fourth is like 66
+    & fifth is like 98.
+}.
+
+
+# Randomization #
+
+# Randomization.ItemFrom #
+
+A fact {
+  Create item as a random item from [9,40,3].
+  Expect that item is like 9 
+    | item is like 40 
+    | item is like 3.
+}.
+
+# Randomization.NumberFrom #
+
+A fact {
+  Create number as a random number from 0 to 100.
+  Expect that number is less than 100 & number is more than 0.
+}.
+
+
+# DesignPatterns #
+
+# DesignPatterns.GettersAndSetters #
+
+A fact {
+  Create data as a set of getters and setters
+    for object {
+      - label: null,
+      - content: null
+    }
+    for properties "label", "content";.
+  Expect that data has "label"
+    & data has "content"
+    & data.label is null
+    & data.content is null.
+}.
+
+# DesignPatterns.ModulesPattern #
+
+A fact {
+  Create modules as a module system pattern implementation.
+  Expect that modules knows how to "require"
+    & modules knows how to "define".
+  Let modules.define("module a", [], a fn {
+    Return 250.
+  }).
+  Let modules.define("module b", ["module a"], a fn {
+    Return 250 + modules.require("module a").
+  }).
+  Create moduleB as modules.require("module b").
+  Expect that moduleB is like 500.
+}.
+
+# DesignPatterns.SubscriptorPattern #
+
+A fact {
+  Create event as a generic subscriptor pattern implementation
+    from {}
+    with subscriptions as "_events"
+    with subscriptor as "addEventListener"
+    with unsubscriptor as "removeEventListener"
+    with publisher as "trigger".
+  Create event2 as a specific subscriptor pattern implementation
+    from {}
+    with subscriptions as "_events"
+    with subscriptor as "addEventListener"
+    with unsubscriptor as "removeEventListener"
+    with publisher as "trigger".
+  Log event, event2.
+}.
+
+# DesignPatterns.ProxyPattern #
+
+A fact {
+  Create proxy as a proxy
+    from {a: "a"}
+    with "b" as "b"
+    with "c" as "c"
+    with "d" as "d".
+  Expect that proxy has "a" 
+    & proxy has "b"
+    & proxy has "c"
+    & proxy has "d"
+    & proxy does not have "e"
+    & proxy.a is like "a"
+    & proxy.b is like "b"
+    & proxy.c is like "c"
+    & proxy.d is like "d".
+}.
+
+# DesignPatterns.IteratorPattern #
+
+A fact {
+    Create data as {
+    - some: "data",
+    - arrays: "too",
+    - a: "a",
+    - b: "b",
+    - c: "c"
+  }.
+  Create iterator as an iterator for data.
+  Repeat 10 times {
+    Log iterator.
+  }.
+  Expect that iterator has "index".
+  Expect that iterator has "items".
+  Expect that iterator knows how to "hasNext".
+  Expect that iterator knows how to "hasPrevious".
+  Expect that iterator knows how to "next".
+  Expect that iterator knows how to "previous".
+  Expect that iterator knows how to "get".
+  Expect that iterator knows how to "reset".
+
+  While iterator.hasNext() {
+    Create item as iterator.next().
+    Switch depending on iterator.index {
+      Like 0: {
+        Expect that item is like "data".
+        Break here.
+      }
+      Like 1: {
+        Expect that item is like "too".
+        Break here.
+      }
+      Like 2: {
+        Expect that item is like "a".
+        Break here.
+      }
+      Like 3: {
+        Expect that item is like "b".
+        Break here.
+      }
+      Like 4: {
+        Expect that item is like "c".
+        Break here.
+      }
+    }.
+  }.
+
+}.
+
+# DesignPatterns.StatePattern #
+
+A fact {
+  Create state as a state pattern.
+  Let state.changeState("temperature", 21).
+  Let state.changeState("temperature units", "ºC").
+  Expect that state.getState("temperature") is like 21.
+  Expect that state.getState("temperature units") is like "ºC".
+  Expect that state.states is similar to {
+    - *"temperature": 21,
+    - *"temperature units": "ºC"
+  }.
+}.
+
+# DesignPatterns.FacadePattern #
+
+A fact {
+  Create facade as a facade pattern {
+    Private facade as this idea.
+    Private name as "Carl".
+    Private surname as "Carlson".
+    Public getName as a fn {
+      Return facade.name || arguments.0 || "unnamed".
+    }.
+    Public setName as a fn(name) {
+      Set facade.name to name.
+      Return this idea.
+    }.
+  }.
+  Expect that facade does not have "name" 
+    & facade does not have "surname"
+    & facade has "getName"
+    & facade has "setName".
+}.
+
+# DesignPatterns.CommandPattern #
+
+A fact {
+  Create commander as a command pattern.
+  Expect that commander has "commands"
+    & commander knows how to "getCommand"
+    & commander knows how to "setCommand"
+    & commander knows how to "executeCommand".
+  Create additionCommand as a fn (a,b,c) {
+    Return a + b + c.
+  }.
+  Let commander.setCommand("addition", additionCommand).
+  Expect that commander.executeCommand("addition", 10, 4, 6) is like 20.
+}.
+
+# DesignPatterns.FunctionalProxyPattern #
+
+A fact {
+  Create memo as [].
+  Create functionallyProxified as a functional proxy
+    from a fn {
+      memo.push(7).
+    }
+    hook before with a fn {
+      memo.push(0).
+    }
+    hook after with a fn {
+      memo.push(14).
+    }.
+  Let functionallyProxified().
+  Expect that memo.0 is like 0
+    & memo.1 is like 7
+    & memo.2 is like 14.
+}.
+
+
+# WebServers #
+
+# WebServers.StartHTTPServer #
+
+A fact {
+
+  // Not tested programatically here because it's environment-dependent.
+
+  Try critically {
+    Create server as a server
+      at host "127.0.0.1"
+      at port 5556 {
+      Let response.end("---").
+    }.
+    Start a thread in 5 seconds like {
+      Log "A server was closed".
+      Let server.close().
+    }.
+  } Catch {
+    Expect that "WebServers.StartHTTPServer could not pass the test" is null.
+  }.
+}.
+
+# WebServers.ServerApplication #
+
+A fact {
+
+  // Not tested programatically here because it's environment-dependent.
+
+  Try critically {
+
+    # WebServers.ServerApplication.Start #
+    Start a server application at port 3333 {
+    
+      # WebServers.ServerApplication.LoadSession #    
+      Load session.
+    
+      # WebServers.ServerApplication.StartSocket #    
+      Start a socket {    
+        In namespace "/chats" {      
+          On "user message" with user, data; {
+            Let socket_namespace.broadcast.emit("user message", {
+                - user: user,
+                - data: data
+              } stringified).
+          }.
+          On "user private message" {
+            Let socket_namespace.broadcast.emit("user private message", {
+                - user: user,
+                - data: data
+              } stringified).
+          }.
+          On "user connected" {
+            Let socket_namespace.broadcast.emit("user connected", {
+                - user: user,
+                - data: data
+              } stringified).
+          }.
+          On "user disconnected" {
+            Let socket_namespace.broadcast.emit("user disconnected", {
+                - user: user,
+                - data: data
+              } stringified).
+          }.
+          On "" {
+            Let socket_namespace.broadcast.emit("", {
+                - user: user,
+                - data: data
+              } stringified).
+          }.
+        }.    
+      }.
+    
+      # WebServers.ServerApplication.DispatchRequests #
+      Dispatch GET requests at "/api/v1/sample" {
+        Let response.send({
+          - data: "sample GET"
+        } stringified).
+      }.
+      
+      Dispatch POST requests at "/api/v1/sample" {
+        Let response.send({
+          - data: "sample POST"
+        } stringified).
+      }.
+      
+      Dispatch ALL requests at "/api/v1/" {
+        Let response.send({
+          - info: "This is a simple example of API done in NS"
+        } stringified).
+      }.
+      
+      Dispatch ALL requests at "/api" {
+        Let response.send([jsrender:]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{{:title}}</title>
+  {{for scripts}}
+  <script src="{{:#data}}"></script>
+  {{/for}}
+  {{for styles}}
+  <link rel="stylesheet" type="text/css" href="{{:#data}}" />
+  {{/for}}
+</head>
+<body>
+  <h1>{{:title}}</h1>
+  <div>
+    You can see how easy and comfortable it is to deploy a pro web application
+    with the NaturalScript code
+  </div>
+  <div>
+    Right now, the most uncomfortable point is the dependency download.
+  </div>
+  <div>
+    And it is not thanks to NPM.
+  </div>
+</body>
+</html>
+        [:jsrender][data:]
+        - title: "Some TITLE",
+        - scripts: ["js/example.js"],
+        - styles: ["css/example.css"]
+        [:data]).
+      }.
+    
+      # WebServers.ServerApplication.DispatchFilesStatically #
+      Dispatch files statically from "public_html" at "/".
+      
+      # WebServers.ServerApplication.DispatchHttpRestAPI #
+      Dispatch HTTP REST API at "/api/v2/something" exposing table "table1".
+      
+      # WebServers.ServerApplication.RouteFrom #
+      Route from "/application-x" {
+        Dispatch GET requests at "/" like {
+          Let response.send("Welcome to Application X").
+        }.
+        Dispatch POST requests at "/" like {
+          Let response.send("Welcome to Application X Login").
+        }.
+      }.
+    }.
+  } Catch {
+    Expect that "WebServers.ServerApplication.* tests could not be passed" is null.
+  }.
+}.
+
+# WebServers.WebApplicationInformationBundle #
+
+A fact {
+  
+  # WebServers.WebApplicationInformationBundle.LoadInformation #
+  Load a web application information bundle.
+
+  # WebServers.WebApplicationInformationBundle.RegisterInformation #
+  Register web path named "file" as ".".
+  Register web url named "app" as "http://www.my-super-app.com".
+  Register web global named "---" as "nothing".
+  Register web middleware named "log visit" as a fn (request, resopnse, next) {
+    Create data as {}.
+    Let require("fs").appendFileSync("visits.json", data stringified, "utf8").
+    Let next().
+  }.
+  Register web controller named "home" as a fn {
+    Let response.send({
+      - status: "ok",
+      - data: {}
+    } stringified).
+  }.
+  Register web template named "div tag" as [jsrender:]<div>{{:data}}</div>[:jsrender].
+  Register web model named "User" as a fn.
+  Register web data named "some key" as "some value".
+  Register web setting named "ENVIRONMENT" as "DEV".
+  Register web helper named "add numbers" as a fn.
+  Register web query named "get all users" as "SELECT * FROM user;".
+  
+  # WebServers.WebApplicationInformationBundle.RetrieveInformation #
+  Expect that a web path("file") is like ".".
+  Expect that a web url("app") is like "http://www.my-super-app.com".
+  Expect that a web global("---") is like "nothing".
+  Expect that a web middleware("log visit") is a type of action.
+  Expect that a web controller("home") is a type of action.
+  Expect that a web template("div tag").render("Hola") is like "<div>Hola</div>".
+  Expect that a web model("User") is a type of action.
+  Expect that a web data("some key") is like "some value".
+  Expect that a web setting("ENVIRONMENT") is like "DEV".
+  Expect that a web helper("add numbers") is a type of action.
+  Expect that a web query("get all users") is like "SELECT * FROM user;".
+  
+}.
+
+# WebServers.StartClientSocket #
+
+A fact {
+
+  Try critically {
+    // Notice that socket.io needs to be loaded by the client for this grammar to work
+    Start a client socket in namespace "/chats" like {
+      On "send message" with user, data; like {
+        Let socket.emit("message received", "User ID", {
+          event:"send message",
+          user:user,
+          data:data
+        }).
+      }.
+      On "send private message" with user, data; like {
+        Let socket.emit("message received", "User ID", {
+          event:"send message",
+          user:user,
+          data:data
+        }).
+      }.
+      On "user connected" with user, data; like {
+        Let socket.emit("message received", "User ID", {
+          event:"send message",
+          user:user,
+          data:data
+        }).
+      }.
+      On "user disconnected" with user, data; like {
+        Let socket.emit("message received", "User ID", {
+          event:"send message",
+          user:user,
+          data:data
+        }).
+      }.
+    }.
+  } Catch {
+    Expect that "WebServers.StartClientSocket tests could not be passed" is null.
+  }.
+}.
+
+# Database #
+
+A fact {
+
+  // Notice that this test needs to have
+  // mysql and mysql2 installed
+  // and a MySQL database with a table
+  // `users`, which has a column `id`.
+
+  Try critically {
+    # Database.LoadDatabase #
+    Load database
+      with host as "127.0.0.1"
+      with database as "naturalscript_db"
+      with user as "root"
+      with password as "toor".
+    # Database.QueryDatabase #
+    Create data as [sql:]SELECT * FROM users WHERE users.id = ?;[:sql]
+      [data:]
+       - 0
+      [:data].
+  } Catch {
+    Expect that "Load database test could not pass" is null.
+  }.
+  
+}.
+
+# Database.GenerateORM #
+
+A fact {
+
+  // Notice that this test needs sequelize and a MySQL set up properly.
+  Try critically {
+    Generate ORM
+      from database "naturalscript_db"
+      with user "root"
+      with password "toor" 
+      then {
+      // Injected in scope: SequelizeAuto, error, orm
+    }.
+  } Catch {
+    Expect that "Generate ORM test could not pass" is null.
+  }.
+}.
+
+
+# Scrapping #
+
+# Scrapping.ScrapSites #
+
+A fact {
+  Try critically {
+    Scrap sites:
+      - "http://www.yourwebpage.com",
+      - "http://www.hiswebpage.com",
+      - "http://www.herwebpage.com",
+      - "http://www.theirwebpage.com";
+    like {
+      Create data as page.evaluate(a fn {
+        Isolated environment {
+          Create links as <* "a" *> filtered like {
+            Return when value.textContent is not like "" then true otherwise false.
+          }.
+          Return links.
+        }.
+      }).
+      Return data.
+    }
+    Then {
+      Let fs.write("links.json", output prettily stringified).
+    }.
+  } Catch {
+    Expect that "Scrapping.ScrapSites test could not pass" is null.
+  }.
+}.
+
+
+# Authorization #
+
+/*
+
+# THIS IS THE MYSQL SCRIPT TO CREATE THE AUTHORIZATION DATABASE SYSTEM #
+
+#
+
+DROP DATABASE IF EXISTS naturalscript_db;
+CREATE DATABASE naturalscript_db;
+
+#
+
+USE naturalscript_db;
+
+# CHANGE THE DATABASE NAME BELOW #
+
+# ************************
+# *** GENERATED TABLES ***
+# ************************
+
+#      auth_user:                       - user, password, emails
+#      auth_collective:                 - collective
+#      auth_user_and_collective:        - id, user, collective
+#      auth_operation:                  - operation
+#      auth_privilege:                  - privilege
+#      auth_privilege_and_user:         - id, privilege, user
+#      auth_privilege_and_collective:   - id, privilege, collective
+#      auth_privilege_and_operation:    - id, privilege, operation
+#      auth_user_extras:                - user, others
+#      auth_collective_extras:          - collective, others
+
+CREATE TABLE auth_user (
+  user VARCHAR(250) PRIMARY KEY,
+    password VARCHAR(50),
+    emails VARCHAR(250)
+);
+CREATE TABLE auth_collective (
+  collective VARCHAR(250) PRIMARY KEY
+);
+
+CREATE TABLE auth_user_and_collective (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user VARCHAR(250),
+    collective VARCHAR(250)
+);
+
+CREATE TABLE auth_operation (
+  operation VARCHAR(250) PRIMARY KEY
+);
+
+CREATE TABLE auth_privilege (
+  privilege VARCHAR(250) PRIMARY KEY
+);
+
+CREATE TABLE auth_privilege_and_user (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  privilege VARCHAR(250),
+    user VARCHAR(250),
+    FOREIGN KEY (privilege) REFERENCES auth_privilege(privilege),
+    FOREIGN KEY (user) REFERENCES auth_user(user)
+);
+
+CREATE TABLE auth_privilege_and_collective (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  privilege VARCHAR(250),
+    collective VARCHAR(250),
+    FOREIGN KEY (privilege) REFERENCES auth_privilege(privilege),
+    FOREIGN KEY (collective) REFERENCES auth_collective(collective)
+);
+
+CREATE TABLE auth_privilege_and_operation (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    privilege VARCHAR(250),
+    operation VARCHAR(250),
+    FOREIGN KEY (privilege) REFERENCES auth_privilege(privilege),
+    FOREIGN KEY (operation) REFERENCES auth_operation(operation)
+);
+
+CREATE TABLE auth_user_extras (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user VARCHAR(250),
+    others TEXT,
+    FOREIGN KEY (user) REFERENCES auth_user(user)
+);
+
+CREATE TABLE auth_collective_extras (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    collective VARCHAR(250),
+    others TEXT,
+    FOREIGN KEY (collective) REFERENCES auth_collective(collective)
+);
+
+# END OF MYSQL SCRIPT
+
+*/
+
+A fact {
+  // Notice that this test needs a mysql database properly set up.
+  Try critically {
+    # Authorization.LoadAuthorizationDatabaseSystem #
+    Load authorization database system.
+    # Authorization.CheckOperation #
+    Only if user "1" is authorized for "1" {
+      Log "user 1 is allowed to operation 1".
+    }.
+    # Authorization.AuthorizationMiddleware #
+    Create someAuthMiddleware as an authorization middleware for operation "".
+  } Catch {
+    Expect that "Authorization.* tests could not pass" is null.
+  }.
+
+}.
+
+
+# Templating #
+
+# Templating.JSRender #
+
+A fact {
+  Create template as [jsrender:]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{{:title}}</title>
+</head>
+<body>
+  <h1>{{:title}}</h1>
+  <h3>{{:subtitle}}</h3>
+</body>
+</html>
+  [:jsrender][data:]
+    - title: "Some title",
+    - subtitle: "Some subtitle"
+  [:data].
+}.
+
+# Templating.JSRenderSQL #
+
+A fact {
+  Try critically {
+    [jsrender-sql:]
+    SELECT * FROM {{:sqlValue table}}
+      WHERE 1 = 1
+      {{if fields}}
+        {{for fields}}
+          AND {{:sqlId name}} {{:sqlId operator}} {{:sqlValue value}}  
+        {{/for}}
+      {{/if}};[:jsrender-sql][data:]
+      - fields: [{
+        - name: "id",
+        - operator: "=",
+        - value: "5"
+      }, {
+        - name: "name",
+        - operator: "=",
+        - value: "Josuét"
+      }][:data].
+  } Catch {
+    Expect that "Templating.JSRenderSQL tests could not pass" is null.
+  }.
+}.
+
+
+# Filesystem.File #
+
+A fact {
+  // Notice that this tests have to be in a Node.js environment
+  Try critically {
+    Create file1 as [file:].[:file].
+    Create file2 as [@file:]"."[:file].
+    Create file3 as a file from ".".
+    Expect that file1 is a type of list
+      & file2 is a type of list
+      & file3 is a type of list.
+    If file1.length > 0 {
+      Create fileX as [@file:]file1.0[:file].
+      Expect that fileX is a type of text 
+        | fileX is a type of list.
+    }.
+  } Catch {
+    Expect that "Filesystem.File tests could not pass" is null.
+  }.
+}.
+
+# Filesystem.Dump #
+
+A fact {
+  Try critically {
+    Dump {a:"a",b:"b"}.
+  } Catch {
+    Expect that "Filesystem.Dump tests could not pass" is null.
+  }.
+}.
+
+
+# OS #
+
+# OS.ExecuteCommand #
+
+A fact {
+  // Notice that this command requires to be executed
+  // in a Node.js environment, and have npm installed 
+  // globally, and so accessible from command line.
+  Try critically {
+    [cmd:]npm install express[:cmd].
+    [cmd:]npm install body-parser[:cmd].
+    [cmd:]npm install client-session[:cmd].
+  } Catch {
+    Expect that "OS.ExecuteCommand tests could not pass" is null.
+  }.
+}.
+
+
+# Timing #
+
+# Timing.StartChronometer #
+
+A fact {
+  Create chronometer as a chronometer.
+  Let chronometer.start().
+  Start a thread in 3 seconds like {
+    Log chronometer.getTime().
+  }.
+}.
+
+
+# Appendixes #
+
+# Appendixes.stringified #
+
+A fact {
+  Expect that "California Dreamin Taratarata" stringified is like a text like
+  "California Dreamin Taratarata"
+  end of text.
+}.
+
+# Appendixes.parsedAs #
+
+A fact {
+  Expect that """{"message":"text"}""" parsed as JSON is similar to {
+    - message: "text"
+  }.
+}.
+
+# Appendixes.extendedBy #
+
+A fact {
+  Create data as {a:"a"} extended by {b:"b"},{c:"c"}.
+  Expect that data has "a" 
+    & data has "b"
+    & data has "c"
+    & data does not have "d".
+}.
+
+# Appendixes.deeplyExtendedBy #
+
+A fact {
+  Create data as {
+    - songs: ["California Dreamin"]
+  } deeply extended by {
+    - songs: ["Time of the season"]
+  }, {
+    - songs: ["Hotel California"],
+    - cities: {
+      - America: ["LA", "San Francisco"]
+    }
+  }, {
+    - cities: {
+      - America: ["Las Vegas"],
+      - Europe: ["London", "Paris"]
+    }
+  }.
+  Expect that data has "songs"
+    & data has "cities"
+    & data.songs.0 is like "California Dreamin"
+    & data.songs.1 is like "Time of the season"
+    & data.songs.2 is like "Hotel California"
+    & data.cities.0 is similar to {
+      - America: ["LA", "San Francisco", "Las Vegas"],
+      - Europe: ["London", "Paris"]
+    }.
+}.
+
+# Appendixes.filteredByOrLike #
+
+A fact {
+  Create filter as a fn (value, key, index, output, original) {
+    If (("" + value).split("").reverse().join("").indexOf("5") is like 0) {
+      Return true.
+    }.
+  }.
+  Create originalData as [0,5,15,20,25].
+  Create expectedResult as [5,15,25].
+  Create expectedMapResult as {1:5,3:15,5:25}.
+  Expect that originalData filtered like {
+    Return filter.apply(filter, arguments list-filtered by a fn that returns true).
+  } is similar to expectedResult.
+  Expect that originalData filtered by filter is similar to expectedResult.
+  // List-filtered:
+  Set filter to a fn (value, key, index, output, original) {
+    Return filter.apply(filter, arguments list-filtered by a fn that returns true).
+  }.
+  Expect that originalData list-filtered like {
+    Return filter.apply(filter, arguments list-filtered by a fn that returns true).
+  } is similar to expectedResult.
+  Expect that originalData list-filtered by filter is similar to expectedResult.
+  // Object-filtered:
+  Set filter to a fn (value, key, index, output, original) {
+    Return filter.apply(filter, arguments list-filtered by a fn that returns true).
+  }.
+  Expect that originalData object-filtered like {
+    Return filter.apply(filter, arguments list-filtered by a fn that returns true).
+  } is similar to expectedMapResult.
+  Expect that originalData object-filtered by filter is similar to expectedResult.
+}.
+
+# Appendixes.mappedByOrLike #
+
+A fact {
+  Create mapper as a fn (value, key, index, output, original) {
+    If (("" + value).split("").reverse().join("").indexOf("5") is like 0) {
+      Return:
+        - key: "-" + (parseInt(key) + 1),
+        - value: value + 1.
+    }.
+  }.
+  Create originalData as [0,5,15,20,25].
+  Create expectedResult as [6,16,26].
+  Create expectedMapResult as {
+    - *"-2": 6,
+    - *"-4": 16,
+    - *"-6": 26
+  }.
+  Expect that originalData mapped like {
+    Return mapper.apply(mapper, arguments list-mapped by a fn that returns true).
+  } is similar to expectedMapResult.
+  Expect that originalData mapped by mapper is similar to expectedMapResult.
+  // List-mapped:
+  Set mapper to a fn (value, key, index, output, original) {
+    Return mapper.apply(mapper, arguments list-mapped by a fn that returns true).
+  }.
+  Expect that originalData list-mapped like {
+    Return mapper.apply(mapper, arguments list-mapped by a fn that returns true).
+  } is similar to expectedResult.
+  Expect that originalData list-mapped by mapper is similar to expectedResult.
+  // Object-mapped:
+  Set mapper to a fn (value, key, index, output, original) {
+    Return mapper.apply(mapper, arguments list-mapped by a fn that returns true).
+  }.
+  Expect that originalData object-mapped like {
+    Return mapper.apply(mapper, arguments list-mapped by a fn that returns true).
+  } is similar to expectedMapResult.
+  Expect that originalData object-mapped by mapper is similar to expectedMapResult.
+}.
+
+# Appendixes.modifiedByOrLike #
+
+A fact {
+  Expect that 500 modified like {
+    Return original + 5.
+  } is like 505.
+}.
+
+# Appendixes.ensuredAs #
+
+A fact {
+  Try {
+    Create a as a fn ensured as action.
+    Create b as a fn ensured as function.
+    Create c as "" ensured as text.
+    Create d as "" ensured as string.
+    Create e as true ensured as boolean.
+    Create f as false ensured as condition.
+    Create g as 50 ensured as number.
+    Create h as [] ensured as list.
+    Create i as [] ensured as array.
+    Create j as {} ensured as map.
+    Create k as {} ensured as object.
+    Create l as 500.5 ensured as text.
+    Expect that "" is null.
+  } Catch {
+    Expect that exception.message is like "NS-Ensurer error: Expected string/text but found number".
+  }.
+}.
+
+# Appendixes.introspectedByOrLike #
+
+A fact {
+  Create memo as [].
+  Create data as {
+    - a: "aaa",
+    - b: "bbb"
+  } introspected like {
+    Let memo.push(index, key, value).
+  }.
+  Create iterator as a fn(value, key, index) {
+    Let memo.push(index + 1, "-" + key, "-" + value).
+  }.
+  Let data introspected by iterator.
+  Expect that memo is similar to {
+    *"a":  "aaa",
+    *"b":  "bbb",
+    *"-a": "-aaa",
+    *"-b": "-bbb"
+  }.
+}.
+
+# Appendixes.putIn #
+
+A fact {
+  Create store as null.
+  Create value as 500 + 500 put in store.
+  Expect that store is like 1000.
+}.
+
+# Appendixes.logged #
+
+A fact {
+  Create memo as [].
+  Create normalLog as console.log.
+  Set console.log as a fn {
+    From 0 to arguments.length {
+      Let memo.push(arguments.{index}).
+    }.
+  }.
+  Create result as (800 + 9) logged logged logged.
+  Set console.log as normalLog.
+  Expect that result is like 809.
+}.
+
+# Appendixes.alerted #
+
+A fact {
+  Expect that [ns2js:]Let "Hello!" alerted.
+[:ns2js].indexOf("alert(") is like 0.
+
+}.
+
+# Appendixes.formattedWith #
+
+A fact {
+  Expect that "${0} ${1} ${2}"
+    formatted with:
+      - "0",
+      - "5",
+      - "9"; is like "0 5 9".
+}.
+
+# Appendixes.breakpointed #
+
+A fact {
+  Try critically {
+    Let "Hello" breakpointed.
+  } Catch {
+    Expect that "Appendixes.breakpointed test could not be passed" is like null.
+  }.
+}.
+
+# Appendixes.mathemathicalOperations #
+
+A fact {
+  Create x as 10.
+  Create result as (80 + 1) + (90 - 1) + (100 * 2) + (110 / 2) + (105 % 100) + (5x^2).
+  Expect that result is like 81 + 91 + 200 + 55 + 5 + 500.
+}.
+
+# Appendixes.binaryOperations #
+
+A fact {
+  Expect that 0 || false || null || undefined || "not falsy" is like "not falsy".
+  Expect that 0 && 500.
+}.
